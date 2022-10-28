@@ -1,0 +1,106 @@
+[ {
+  "baseItem" : {
+    "id" : "_Ec7ocxyJEeiuOvPhKHCIWA",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_F9PIEBrdEeilK-3aicBZHw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_se-nEBxzEeiuOvPhKHCIWA",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_se-nEBxzEeiuOvPhKHCIWA - ProductsMetadata",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_Ec7ocxyJEeiuOvPhKHCIWA",
+    "version" : "0.2",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_F9PIEBrdEeilK-3aicBZHw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_se-nEBxzEeiuOvPhKHCIWA",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_se-nEBxzEeiuOvPhKHCIWA - ProductsMetadata",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_IhbKEEzUEe2k6dJFiXY7Vg",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_F9PIEBrdEeilK-3aicBZHw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_92gJABxyEeiuOvPhKHCIWA - CustomersSchema",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_oA8gUGg2EeqiXOjeJKWCZg",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_F9PIEBrdEeilK-3aicBZHw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_92gJABxyEeiuOvPhKHCIWA - CustomersSchema",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_rBMDYGgkEeqQN4IBFd4u_Q",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "MDM",
+    "version" : "Latest",
+    "type" : "routine"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_waD4oEv7Ee2sEt7xhmnMVw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_F9PIEBrdEeilK-3aicBZHw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_92gJABxyEeiuOvPhKHCIWA - CustomersSchema",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_xbe10FCPEe274pTlovOedQ",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_CPo24FCNEe274pTlovOedQ",
+    "version" : "Latest",
+    "type" : "property"
+  } ]
+} ]
