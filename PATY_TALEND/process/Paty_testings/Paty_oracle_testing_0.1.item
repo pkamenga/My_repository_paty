@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:sUeY+jlB/WbS4RGfw7qMEGgorDHh2BGgHOWjJKM0"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:CSAj8iYSOc8c2ZyyxDCK01vbT5PjLJ/1a/qJOGu8"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:+a2aw0ZIhXGQjYIa6T3/5jG00vjLYkLraBvmFSp7"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:XX1wJxlkzJCEF5eN2Bpif+RIOLqSr0+Y8214o9Re"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -115,19 +115,21 @@
   </parameters>
   <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_CPo24FCNEe274pTlovOedQ"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
-    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SERVICE_NAME"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_10"/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SID"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_18"/>
     <elementParameter field="TEXT" name="RAC_URL" show="false" value="&quot;chirptdb.admin.uillinois.edu&quot;"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;chirptdb.admin.uillinois.edu&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="ORACLE_SID"/>
     <elementParameter field="TEXT" name="PORT" value="&quot;1521&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;REPTPROD&quot;"/>
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;REPTPROD&quot;"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;PAYROLL&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;UI2SQAAKNIME&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:9MgrARRI6aaDMjGMZe1r+PODCC57vza5DFEbviBperb5qrtf33ExJOsncvHCoolB0+xSq+YsyLQ5MSY="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:zio/SvvNu9t4t8U+IEvL19Xv47RVysSbuxzVluBRIVMRKC8pLjWvasyg41uLN/RbXtQ1Yo4wIc2s8KA="/>
     <elementParameter field="TEXT" name="JDBC_URL" show="false" value="&quot;jdbc:oracle:oci:/@talend&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;ptrcaln&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
@@ -148,12 +150,152 @@
     <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
     <elementParameter field="TEXT" name="CURSOR_SIZE" show="false" value="1000"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
-    <elementParameter field="TABLE" name="TRIM_COLUMN"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_YEAR"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_PICT_CODE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_PAYNO"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_START_DATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_END_DATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_CHECK_DATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_PAY_OF_MONTH_IND"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_FISC_CODE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_ACTIVITY_DATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_ETOT_IND"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_JTOT_IND"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_DTOT_IND"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_DEDN_IND"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_JOBS_IND"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_DEFER_IND"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_TERM_IND"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_LEAV_IND"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_STATS_CANADA_YEAR"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_STATS_CANADA_MONTH"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_TIME_ENTRY_START_DATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_TIME_ENTRY_END_DATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_TIME_ENTRY_CUTOFF_TIME"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_WEB_VIEW_CUTOFF_DATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_LEAV_REPT_START_DATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_LEAV_REPT_END_DATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_LEAV_REPT_CUTOFF_TIME"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_LR_WEBVIEW_CUTOFF_DATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_CHECK_MESG_LINE1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_CHECK_MESG_LINE2"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_CHECK_MESG_LINE3"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_CHECK_MESG_LINE4"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_CHECK_MESG_LINE5"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_CHECK_MESG_LINE6"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_CHECK_MESG_LINE7"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_CHECK_MESG_LINE8"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_APR_WEBVCUTOFF_DATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_LR_APR_WEBVCUTOFF_DATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_SURROGATE_ID"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_VERSION"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_USER_ID"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_DATA_ORIGIN"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_VPDI_CODE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_TS_APR_END_DATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_TS_APR_CUTOFF_TIME"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_LR_APR_END_DATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_LR_APR_CUTOFF_TIME"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
     <elementParameter field="CHECK" name="NO_NULL_VALUES" value="false"/>
-    <elementParameter field="CHECK" name="SUPPORT_NLS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="Sr_ptrcaln"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tDBInput_1"/>
+    <metadata connector="FLOW" name="tDBInput_1">
+      <column comment="" key="false" length="4" name="PTRCALN_YEAR" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="PTRCALN_PICT_CODE" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="3" name="PTRCALN_PAYNO" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_START_DATE" nullable="false" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_END_DATE" nullable="false" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_CHECK_DATE" nullable="false" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1" name="PTRCALN_PAY_OF_MONTH_IND" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="4" name="PTRCALN_FISC_CODE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="PTRCALN_ACTIVITY_DATE" nullable="false" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1" name="PTRCALN_ETOT_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1" name="PTRCALN_JTOT_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1" name="PTRCALN_DTOT_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1" name="PTRCALN_DEDN_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1" name="PTRCALN_JOBS_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1" name="PTRCALN_DEFER_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1" name="PTRCALN_TERM_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1" name="PTRCALN_LEAV_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="4" name="PTRCALN_STATS_CANADA_YEAR" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="3" name="PTRCALN_STATS_CANADA_MONTH" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="PTRCALN_TIME_ENTRY_START_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="PTRCALN_TIME_ENTRY_END_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="4" name="PTRCALN_TIME_ENTRY_CUTOFF_TIME" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="PTRCALN_WEB_VIEW_CUTOFF_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="PTRCALN_LEAV_REPT_START_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="PTRCALN_LEAV_REPT_END_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="4" name="PTRCALN_LEAV_REPT_CUTOFF_TIME" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="PTRCALN_LR_WEBVIEW_CUTOFF_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE1" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE2" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE3" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE4" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE5" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE6" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE7" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE8" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="PTRCALN_APR_WEBVCUTOFF_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="PTRCALN_LR_APR_WEBVCUTOFF_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="PTRCALN_SURROGATE_ID" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="PTRCALN_VERSION" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="30" name="PTRCALN_USER_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="30" name="PTRCALN_DATA_ORIGIN" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="6" name="PTRCALN_VPDI_CODE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="PTRCALN_TS_APR_END_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="4" name="PTRCALN_TS_APR_CUTOFF_TIME" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="PTRCALN_LR_APR_END_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="4" name="PTRCALN_LR_APR_CUTOFF_TIME" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+    </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="320" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
@@ -169,10 +311,249 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="stagerows" name="stagerows">
+      <column comment="" key="false" length="4" name="PTRCALN_YEAR" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="PTRCALN_PICT_CODE" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="3" name="PTRCALN_PAYNO" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_START_DATE" nullable="false" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_END_DATE" nullable="false" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_CHECK_DATE" nullable="false" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1" name="PTRCALN_PAY_OF_MONTH_IND" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="PTRCALN_FISC_CODE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_ACTIVITY_DATE" nullable="false" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PTRCALN_ETOT_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PTRCALN_JTOT_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PTRCALN_DTOT_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PTRCALN_DEDN_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PTRCALN_JOBS_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PTRCALN_DEFER_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PTRCALN_TERM_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PTRCALN_LEAV_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="4" name="PTRCALN_STATS_CANADA_YEAR" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="PTRCALN_STATS_CANADA_MONTH" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_TIME_ENTRY_START_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_TIME_ENTRY_END_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="PTRCALN_TIME_ENTRY_CUTOFF_TIME" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_WEB_VIEW_CUTOFF_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_LEAV_REPT_START_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_LEAV_REPT_END_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="PTRCALN_LEAV_REPT_CUTOFF_TIME" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_LR_WEBVIEW_CUTOFF_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE1" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE2" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE3" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE4" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE5" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE6" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE7" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE8" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_APR_WEBVCUTOFF_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_LR_APR_WEBVCUTOFF_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="PTRCALN_SURROGATE_ID" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="PTRCALN_VERSION" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="PTRCALN_USER_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="PTRCALN_DATA_ORIGIN" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="PTRCALN_VPDI_CODE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_TS_APR_END_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="PTRCALN_TS_APR_CUTOFF_TIME" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_LR_APR_END_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="PTRCALN_LR_APR_CUTOFF_TIME" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FLOW" label="stagerowscsv" name="stagerowscsv">
+      <column comment="" key="false" length="4" name="PTRCALN_YEAR" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="PTRCALN_PICT_CODE" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="3" name="PTRCALN_PAYNO" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_START_DATE" nullable="false" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_END_DATE" nullable="false" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_CHECK_DATE" nullable="false" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1" name="PTRCALN_PAY_OF_MONTH_IND" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="PTRCALN_FISC_CODE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_ACTIVITY_DATE" nullable="false" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PTRCALN_ETOT_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PTRCALN_JTOT_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PTRCALN_DTOT_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PTRCALN_DEDN_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PTRCALN_JOBS_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PTRCALN_DEFER_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PTRCALN_TERM_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PTRCALN_LEAV_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="4" name="PTRCALN_STATS_CANADA_YEAR" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="PTRCALN_STATS_CANADA_MONTH" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_TIME_ENTRY_START_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_TIME_ENTRY_END_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="PTRCALN_TIME_ENTRY_CUTOFF_TIME" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_WEB_VIEW_CUTOFF_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_LEAV_REPT_START_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_LEAV_REPT_END_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="PTRCALN_LEAV_REPT_CUTOFF_TIME" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_LR_WEBVIEW_CUTOFF_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE1" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE2" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE3" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE4" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE5" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE6" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE7" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE8" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_APR_WEBVCUTOFF_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_LR_APR_WEBVCUTOFF_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="PTRCALN_SURROGATE_ID" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="PTRCALN_VERSION" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="PTRCALN_USER_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="PTRCALN_DATA_ORIGIN" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="PTRCALN_VPDI_CODE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_TS_APR_END_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="PTRCALN_TS_APR_CUTOFF_TIME" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_LR_APR_END_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="PTRCALN_LR_APR_CUTOFF_TIME" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+    </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="ptrcaln" sizeState="INTERMEDIATE"/>
+      <outputTables minimized="true" name="stagerows" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="ptrcaln.PTRCALN_YEAR " name="PTRCALN_YEAR" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_PICT_CODE " name="PTRCALN_PICT_CODE" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_PAYNO " name="PTRCALN_PAYNO" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_START_DATE " name="PTRCALN_START_DATE" type="id_Date"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_END_DATE " name="PTRCALN_END_DATE" type="id_Date"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_CHECK_DATE " name="PTRCALN_CHECK_DATE" type="id_Date"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_PAY_OF_MONTH_IND " name="PTRCALN_PAY_OF_MONTH_IND" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_FISC_CODE " name="PTRCALN_FISC_CODE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_ACTIVITY_DATE " name="PTRCALN_ACTIVITY_DATE" type="id_Date"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_ETOT_IND " name="PTRCALN_ETOT_IND" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_JTOT_IND " name="PTRCALN_JTOT_IND" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_DTOT_IND " name="PTRCALN_DTOT_IND" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_DEDN_IND " name="PTRCALN_DEDN_IND" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_JOBS_IND " name="PTRCALN_JOBS_IND" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_DEFER_IND " name="PTRCALN_DEFER_IND" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_TERM_IND " name="PTRCALN_TERM_IND" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_LEAV_IND " name="PTRCALN_LEAV_IND" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_STATS_CANADA_YEAR " name="PTRCALN_STATS_CANADA_YEAR" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_STATS_CANADA_MONTH " name="PTRCALN_STATS_CANADA_MONTH" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_TIME_ENTRY_START_DATE " name="PTRCALN_TIME_ENTRY_START_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_TIME_ENTRY_END_DATE " name="PTRCALN_TIME_ENTRY_END_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_TIME_ENTRY_CUTOFF_TIME " name="PTRCALN_TIME_ENTRY_CUTOFF_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_WEB_VIEW_CUTOFF_DATE " name="PTRCALN_WEB_VIEW_CUTOFF_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_LEAV_REPT_START_DATE " name="PTRCALN_LEAV_REPT_START_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_LEAV_REPT_END_DATE " name="PTRCALN_LEAV_REPT_END_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_LEAV_REPT_CUTOFF_TIME " name="PTRCALN_LEAV_REPT_CUTOFF_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_LR_WEBVIEW_CUTOFF_DATE " name="PTRCALN_LR_WEBVIEW_CUTOFF_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_CHECK_MESG_LINE1 " name="PTRCALN_CHECK_MESG_LINE1" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_CHECK_MESG_LINE2 " name="PTRCALN_CHECK_MESG_LINE2" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_CHECK_MESG_LINE3 " name="PTRCALN_CHECK_MESG_LINE3" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_CHECK_MESG_LINE4 " name="PTRCALN_CHECK_MESG_LINE4" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_CHECK_MESG_LINE5 " name="PTRCALN_CHECK_MESG_LINE5" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_CHECK_MESG_LINE6 " name="PTRCALN_CHECK_MESG_LINE6" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_CHECK_MESG_LINE7 " name="PTRCALN_CHECK_MESG_LINE7" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_CHECK_MESG_LINE8 " name="PTRCALN_CHECK_MESG_LINE8" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_APR_WEBVCUTOFF_DATE " name="PTRCALN_APR_WEBVCUTOFF_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_LR_APR_WEBVCUTOFF_DATE " name="PTRCALN_LR_APR_WEBVCUTOFF_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_SURROGATE_ID " name="PTRCALN_SURROGATE_ID" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_VERSION " name="PTRCALN_VERSION" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_USER_ID " name="PTRCALN_USER_ID" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_DATA_ORIGIN " name="PTRCALN_DATA_ORIGIN" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_VPDI_CODE " name="PTRCALN_VPDI_CODE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_TS_APR_END_DATE " name="PTRCALN_TS_APR_END_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_TS_APR_CUTOFF_TIME " name="PTRCALN_TS_APR_CUTOFF_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_LR_APR_END_DATE " name="PTRCALN_LR_APR_END_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_LR_APR_CUTOFF_TIME " name="PTRCALN_LR_APR_CUTOFF_TIME" nullable="true" type="id_String"/>
+      </outputTables>
+      <outputTables name="stagerowscsv" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="ptrcaln.PTRCALN_YEAR " name="PTRCALN_YEAR" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_PICT_CODE " name="PTRCALN_PICT_CODE" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_PAYNO " name="PTRCALN_PAYNO" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_START_DATE " name="PTRCALN_START_DATE" type="id_Date"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_END_DATE " name="PTRCALN_END_DATE" type="id_Date"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_CHECK_DATE " name="PTRCALN_CHECK_DATE" type="id_Date"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_PAY_OF_MONTH_IND " name="PTRCALN_PAY_OF_MONTH_IND" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_FISC_CODE " name="PTRCALN_FISC_CODE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_ACTIVITY_DATE " name="PTRCALN_ACTIVITY_DATE" type="id_Date"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_ETOT_IND " name="PTRCALN_ETOT_IND" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_JTOT_IND " name="PTRCALN_JTOT_IND" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_DTOT_IND " name="PTRCALN_DTOT_IND" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_DEDN_IND " name="PTRCALN_DEDN_IND" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_JOBS_IND " name="PTRCALN_JOBS_IND" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_DEFER_IND " name="PTRCALN_DEFER_IND" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_TERM_IND " name="PTRCALN_TERM_IND" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_LEAV_IND " name="PTRCALN_LEAV_IND" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_STATS_CANADA_YEAR " name="PTRCALN_STATS_CANADA_YEAR" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_STATS_CANADA_MONTH " name="PTRCALN_STATS_CANADA_MONTH" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_TIME_ENTRY_START_DATE " name="PTRCALN_TIME_ENTRY_START_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_TIME_ENTRY_END_DATE " name="PTRCALN_TIME_ENTRY_END_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_TIME_ENTRY_CUTOFF_TIME " name="PTRCALN_TIME_ENTRY_CUTOFF_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_WEB_VIEW_CUTOFF_DATE " name="PTRCALN_WEB_VIEW_CUTOFF_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_LEAV_REPT_START_DATE " name="PTRCALN_LEAV_REPT_START_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_LEAV_REPT_END_DATE " name="PTRCALN_LEAV_REPT_END_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_LEAV_REPT_CUTOFF_TIME " name="PTRCALN_LEAV_REPT_CUTOFF_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_LR_WEBVIEW_CUTOFF_DATE " name="PTRCALN_LR_WEBVIEW_CUTOFF_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_CHECK_MESG_LINE1 " name="PTRCALN_CHECK_MESG_LINE1" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_CHECK_MESG_LINE2 " name="PTRCALN_CHECK_MESG_LINE2" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_CHECK_MESG_LINE3 " name="PTRCALN_CHECK_MESG_LINE3" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_CHECK_MESG_LINE4 " name="PTRCALN_CHECK_MESG_LINE4" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_CHECK_MESG_LINE5 " name="PTRCALN_CHECK_MESG_LINE5" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_CHECK_MESG_LINE6 " name="PTRCALN_CHECK_MESG_LINE6" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_CHECK_MESG_LINE7 " name="PTRCALN_CHECK_MESG_LINE7" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_CHECK_MESG_LINE8 " name="PTRCALN_CHECK_MESG_LINE8" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_APR_WEBVCUTOFF_DATE " name="PTRCALN_APR_WEBVCUTOFF_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_LR_APR_WEBVCUTOFF_DATE " name="PTRCALN_LR_APR_WEBVCUTOFF_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_SURROGATE_ID " name="PTRCALN_SURROGATE_ID" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_VERSION " name="PTRCALN_VERSION" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_USER_ID " name="PTRCALN_USER_ID" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_DATA_ORIGIN " name="PTRCALN_DATA_ORIGIN" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_VPDI_CODE " name="PTRCALN_VPDI_CODE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_TS_APR_END_DATE " name="PTRCALN_TS_APR_END_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_TS_APR_CUTOFF_TIME " name="PTRCALN_TS_APR_CUTOFF_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_LR_APR_END_DATE " name="PTRCALN_LR_APR_END_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="ptrcaln.PTRCALN_LR_APR_CUTOFF_TIME " name="PTRCALN_LR_APR_CUTOFF_TIME" nullable="true" type="id_String"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="ptrcaln" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="PTRCALN_YEAR" type="id_String"/>
+        <mapperTableEntries name="PTRCALN_PICT_CODE" type="id_String"/>
+        <mapperTableEntries name="PTRCALN_PAYNO" type="id_BigDecimal"/>
+        <mapperTableEntries name="PTRCALN_START_DATE" type="id_Date"/>
+        <mapperTableEntries name="PTRCALN_END_DATE" type="id_Date"/>
+        <mapperTableEntries name="PTRCALN_CHECK_DATE" type="id_Date"/>
+        <mapperTableEntries name="PTRCALN_PAY_OF_MONTH_IND" type="id_BigDecimal"/>
+        <mapperTableEntries name="PTRCALN_FISC_CODE" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PTRCALN_ACTIVITY_DATE" type="id_Date"/>
+        <mapperTableEntries name="PTRCALN_ETOT_IND" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PTRCALN_JTOT_IND" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PTRCALN_DTOT_IND" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PTRCALN_DEDN_IND" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PTRCALN_JOBS_IND" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PTRCALN_DEFER_IND" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PTRCALN_TERM_IND" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PTRCALN_LEAV_IND" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PTRCALN_STATS_CANADA_YEAR" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="PTRCALN_STATS_CANADA_MONTH" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PTRCALN_TIME_ENTRY_START_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="PTRCALN_TIME_ENTRY_END_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="PTRCALN_TIME_ENTRY_CUTOFF_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PTRCALN_WEB_VIEW_CUTOFF_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="PTRCALN_LEAV_REPT_START_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="PTRCALN_LEAV_REPT_END_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="PTRCALN_LEAV_REPT_CUTOFF_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PTRCALN_LR_WEBVIEW_CUTOFF_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="PTRCALN_CHECK_MESG_LINE1" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PTRCALN_CHECK_MESG_LINE2" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PTRCALN_CHECK_MESG_LINE3" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PTRCALN_CHECK_MESG_LINE4" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PTRCALN_CHECK_MESG_LINE5" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PTRCALN_CHECK_MESG_LINE6" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PTRCALN_CHECK_MESG_LINE7" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PTRCALN_CHECK_MESG_LINE8" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PTRCALN_APR_WEBVCUTOFF_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="PTRCALN_LR_APR_WEBVCUTOFF_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="PTRCALN_SURROGATE_ID" type="id_BigDecimal"/>
+        <mapperTableEntries name="PTRCALN_VERSION" type="id_BigDecimal"/>
+        <mapperTableEntries name="PTRCALN_USER_ID" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PTRCALN_DATA_ORIGIN" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PTRCALN_VPDI_CODE" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PTRCALN_TS_APR_END_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="PTRCALN_TS_APR_CUTOFF_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PTRCALN_LR_APR_END_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="PTRCALN_LR_APR_CUTOFF_TIME" nullable="true" type="id_String"/>
+      </inputTables>
     </nodeData>
   </node>
   <node componentName="tFileOutputExcel" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="192">
@@ -180,7 +561,7 @@
     <elementParameter field="CHECK" name="VERSION_2007" value="false"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
-    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/pkamenga/workspace/out.xls&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/pkamenga/workspace/stptrcaln.xls&quot;"/>
     <elementParameter field="TEXT" name="SHEETNAME" value="&quot;Sheet1&quot;"/>
     <elementParameter field="CHECK" name="INCLUDEHEADER" value="false"/>
     <elementParameter field="CHECK" name="APPEND_FILE" value="false"/>
@@ -191,9 +572,102 @@
     <elementParameter field="CHECK" name="KEEP_CELL_FORMATING" show="false" value="false"/>
     <elementParameter field="CLOSED_LIST" name="FONT" value=""/>
     <elementParameter field="CHECK" name="IS_ALL_AUTO_SZIE" value="false"/>
-    <elementParameter field="TABLE" name="AUTO_SZIE_SETTING"/>
+    <elementParameter field="TABLE" name="AUTO_SZIE_SETTING">
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_YEAR"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_PICT_CODE"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_PAYNO"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_START_DATE"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_END_DATE"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_CHECK_DATE"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_PAY_OF_MONTH_IND"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_FISC_CODE"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_ACTIVITY_DATE"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_ETOT_IND"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_JTOT_IND"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_DTOT_IND"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_DEDN_IND"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_JOBS_IND"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_DEFER_IND"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_TERM_IND"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_LEAV_IND"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_STATS_CANADA_YEAR"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_STATS_CANADA_MONTH"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_TIME_ENTRY_START_DATE"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_TIME_ENTRY_END_DATE"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_TIME_ENTRY_CUTOFF_TIME"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_WEB_VIEW_CUTOFF_DATE"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_LEAV_REPT_START_DATE"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_LEAV_REPT_END_DATE"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_LEAV_REPT_CUTOFF_TIME"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_LR_WEBVIEW_CUTOFF_DATE"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_CHECK_MESG_LINE1"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_CHECK_MESG_LINE2"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_CHECK_MESG_LINE3"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_CHECK_MESG_LINE4"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_CHECK_MESG_LINE5"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_CHECK_MESG_LINE6"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_CHECK_MESG_LINE7"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_CHECK_MESG_LINE8"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_APR_WEBVCUTOFF_DATE"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_LR_APR_WEBVCUTOFF_DATE"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_SURROGATE_ID"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_VERSION"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_USER_ID"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_DATA_ORIGIN"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_VPDI_CODE"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_TS_APR_END_DATE"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_TS_APR_CUTOFF_TIME"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_LR_APR_END_DATE"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PTRCALN_LR_APR_CUTOFF_TIME"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+    </elementParameter>
     <elementParameter field="CHECK" name="PROTECT_FILE" show="false" value="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:8tCSwfKvFsd7LTaX8SRN13z5UGc7DCiAQnXsssfn"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:NLozhz7ncy93D4ceT93ABo9ewG6uQTy9Pso9BO8+"/>
     <elementParameter field="CHECK" name="CREATE" value="true"/>
     <elementParameter field="CHECK" name="FLUSHONROW" show="false" value="false"/>
     <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="100"/>
@@ -208,29 +682,159 @@
     <elementParameter field="CHECK" name="STREAMING_APPEND" show="false" value="false"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tFileOutputExcel_1"/>
+    <metadata connector="FLOW" label="stagerows" name="tFileOutputExcel_1">
+      <column comment="" key="false" length="4" name="PTRCALN_YEAR" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="PTRCALN_PICT_CODE" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="3" name="PTRCALN_PAYNO" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_START_DATE" nullable="false" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_END_DATE" nullable="false" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_CHECK_DATE" nullable="false" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1" name="PTRCALN_PAY_OF_MONTH_IND" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="PTRCALN_FISC_CODE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_ACTIVITY_DATE" nullable="false" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PTRCALN_ETOT_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PTRCALN_JTOT_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PTRCALN_DTOT_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PTRCALN_DEDN_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PTRCALN_JOBS_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PTRCALN_DEFER_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PTRCALN_TERM_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PTRCALN_LEAV_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="4" name="PTRCALN_STATS_CANADA_YEAR" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="PTRCALN_STATS_CANADA_MONTH" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_TIME_ENTRY_START_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_TIME_ENTRY_END_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="PTRCALN_TIME_ENTRY_CUTOFF_TIME" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_WEB_VIEW_CUTOFF_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_LEAV_REPT_START_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_LEAV_REPT_END_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="PTRCALN_LEAV_REPT_CUTOFF_TIME" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_LR_WEBVIEW_CUTOFF_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE1" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE2" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE3" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE4" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE5" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE6" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE7" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE8" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_APR_WEBVCUTOFF_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_LR_APR_WEBVCUTOFF_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="PTRCALN_SURROGATE_ID" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="PTRCALN_VERSION" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="PTRCALN_USER_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="PTRCALN_DATA_ORIGIN" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="PTRCALN_VPDI_CODE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_TS_APR_END_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="PTRCALN_TS_APR_CUTOFF_TIME" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_LR_APR_END_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="PTRCALN_LR_APR_CUTOFF_TIME" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputDelimited_1"/>
+    <elementParameter field="CHECK" name="USESTREAM" value="false"/>
+    <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/pkamenga/workspace/paty.csv&quot;"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" show="false" value="true"/>
+    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="CHECK" name="APPEND" value="false"/>
+    <elementParameter field="CHECK" name="INCLUDEHEADER" value="false"/>
+    <elementParameter field="CHECK" name="COMPRESS" value="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CREATE" value="true"/>
+    <elementParameter field="CHECK" name="SPLIT" value="false"/>
+    <elementParameter field="TEXT" name="SPLIT_EVERY" show="false" value="1000"/>
+    <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
+    <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="1"/>
+    <elementParameter field="CHECK" name="ROW_MODE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
+    <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="90"/>
+    <elementParameter field="TEXT" name="LABEL" value="Staging_csv"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="stagerowscsv" name="tFileOutputDelimited_1">
+      <column comment="" key="false" length="4" name="PTRCALN_YEAR" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="PTRCALN_PICT_CODE" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="3" name="PTRCALN_PAYNO" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_START_DATE" nullable="false" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_END_DATE" nullable="false" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_CHECK_DATE" nullable="false" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1" name="PTRCALN_PAY_OF_MONTH_IND" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="PTRCALN_FISC_CODE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_ACTIVITY_DATE" nullable="false" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PTRCALN_ETOT_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PTRCALN_JTOT_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PTRCALN_DTOT_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PTRCALN_DEDN_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PTRCALN_JOBS_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PTRCALN_DEFER_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PTRCALN_TERM_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PTRCALN_LEAV_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="4" name="PTRCALN_STATS_CANADA_YEAR" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="PTRCALN_STATS_CANADA_MONTH" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_TIME_ENTRY_START_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_TIME_ENTRY_END_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="PTRCALN_TIME_ENTRY_CUTOFF_TIME" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_WEB_VIEW_CUTOFF_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_LEAV_REPT_START_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_LEAV_REPT_END_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="PTRCALN_LEAV_REPT_CUTOFF_TIME" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_LR_WEBVIEW_CUTOFF_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE1" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE2" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE3" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE4" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE5" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE6" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE7" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="PTRCALN_CHECK_MESG_LINE8" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_APR_WEBVCUTOFF_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_LR_APR_WEBVCUTOFF_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="PTRCALN_SURROGATE_ID" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="PTRCALN_VERSION" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="PTRCALN_USER_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="PTRCALN_DATA_ORIGIN" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="PTRCALN_VPDI_CODE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_TS_APR_END_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="PTRCALN_TS_APR_CUTOFF_TIME" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="PTRCALN_LR_APR_END_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="PTRCALN_LR_APR_CUTOFF_TIME" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+    </metadata>
   </node>
   <connection connectorName="FLOW" label="ptrcaln" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ptrcaln"/>
+  </connection>
+  <connection connectorName="FLOW" label="stagerows" lineStyle="0" metaname="stagerows" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_1" target="tFileOutputExcel_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="stagerows"/>
+  </connection>
+  <connection connectorName="FLOW" label="stagerowscsv" lineStyle="0" metaname="stagerowscsv" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_1" target="tFileOutputDelimited_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="stagerowscsv"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputExcel_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_17021a8f-5e78-448e-9053-c19c842e67a6"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>8ESV3upXWuNq4p7d3r6WnRb5Mr4cOyeU8tUrPaex5VK2rOQDBixFBJEx/0AbCWWgmK3gQPsSzfOA&#13;
-ETA+nrZ6/A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ca810972-05bb-4d07-b8a0-f3ae2253af2f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>AP/TsTgDCXVgMCB2BysleiYgp1eAq4e2M/edAABFi/r8FFuUcFs9viC47Vz26A2LpgA3cbKeG3B5&#13;
-Fv/GyenBPQ==</DigestValue></Reference></SignedInfo><SignatureValue>PyBAsowdfHDRJqCWFRe5BefX7pZomOjn2Xjm61PAW92jqcIywpD0Mf4JLFOSr0wYkRGzbdMbw+Yc&#13;
-Fv21x9JbSVxyf1Zp6DLNttgnZIMIAo3x0vrI2n5GGiPRzPMu8ARU1r2a8AP+TSuoOUrfv5FvtmJg&#13;
-OZ6LoUYo/7mCJMlFCSSGJgDanKlLR0HBHPw67TfhxjKfs3GcIJtnaMVuIozc4HzCPCZXCP9uDK7R&#13;
-UIzwBeU+ApwE2FiB2XzbtW3tsoCGgV1FPSTUU+xQ1GiTKJIY4+jtvI3GdPxZfbprcczbCJv5Yi9w&#13;
-RF1VkVhD3WNa/75MwoquME/ORX9BtxqtKWozHw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_75364a40-7a8a-4b57-aee3-31c9548af269"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>BB+G4F0Ehh3mQT52MmrbL4fXkFYZUwDx6UcHNPBpT/zIpMM77792xDhqL9ita/d5BKic3mcAesYC&#13;
+N5bCZ6wUTA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_778a5609-bd48-4f7c-b561-6606ae47dbfa"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>6mlajDiijvFqg+QPl/nZ3tZ4Fz/R0RyYPSr2wAnwsOXfbLftpvoyVREDFMGFeabepRAt7uVN9ROJ&#13;
+UBEXLNR7mQ==</DigestValue></Reference></SignedInfo><SignatureValue>fP2Fu4CnM9TOHIH2chXJhF8sChRwP+T+gQtf9oXml3vlxgDX9clWvz6p3Wx8MrIJ2Zs0ioD6gapQ&#13;
+GRK1Hxk6zd+864Y+u0WuuWp5QMmNeelsrBYq790aiqQSmA3o9UwQ9eQhrsdq2fqEfkDydrezjoTs&#13;
+cRtQoRtUYRDBgUKeRdQvEYDH0XY3I71OGK6unoIyo0fGq8YlCaHF1DMcWg3oVeq+FpfvQikfuz24&#13;
+Gu9XWUEnv4ysicpOu7/WzbS8eQ2/H+smkrHPKB4h5xLlrFFww1iGrgevarfQ2x8TzVpChr5T68ub&#13;
+8bgOToF/qBp2Tw79w6jNFNLM3S00dyysZsQg8g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -252,4 +856,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ca810972-05bb-4d07-b8a0-f3ae2253af2f" Target="#_17021a8f-5e78-448e-9053-c19c842e67a6"><Timestamp>2022-11-01 13:51:01</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_778a5609-bd48-4f7c-b561-6606ae47dbfa" Target="#_75364a40-7a8a-4b57-aee3-31c9548af269"><Timestamp>2022-11-01 17:12:24</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
